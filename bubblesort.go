@@ -5,18 +5,18 @@ import (
 )
 
 func main(){
-	int_arr := []int{123, 1425, 3462, 7, 347, 6432, 312}
-	res := bublesort(int_arr)
+	int_arr := []int{2, 212, 3001, 14, 501, 7800, 9932, 33, 45, 45, 45, 91, 99, 37, 102, 102, 104, 106, 109, 106}
+	res := bubblesort(int_arr)
 	fmt.Printf("%v", res)
 }
 
-func bublesort(list []int) []int{
+func bubblesort(list []int) []int{
 	length := len(list)
 	for idx := range list{
 		if idx != length - 1{
 			if list[idx] > list[idx + 1]{
 				list[idx], list[idx + 1] = list[idx + 1], list[idx]
-				list = bublesort(list)
+				list = bubblesort(list)
 			}
 		}
 	}
