@@ -24,7 +24,7 @@ func ReverseVowels(str string) string {
 					strArr[idx2] = string(str[idx2])
 				}
 			}
-			if !swaped {
+			if !swapped {
 				strArr[idx] = string(str[idx])
 			}
 		} else {
