@@ -12,13 +12,13 @@ func ReverseVowels(str string) string {
 
 	for idx := 0; idx < len(str); idx++ {
 		if strings.Contains(vowels, string(str[idx])) && idx < idx2 {
-			swaped := false
+			swapped := false
 			for ; idx2 > idx; idx2-- {
 				if strings.Contains(vowels, string(str[idx2])) {
 					strArr[idx] = string(str[idx2])
 					strArr[idx2] = string(str[idx])
 					idx2--
-					swaped = true
+					swapped = true
 					break
 				} else {
 					strArr[idx2] = string(str[idx2])
@@ -34,6 +34,5 @@ func ReverseVowels(str string) string {
 			break
 		}
 	}
-	res := strings.Join(strArr, "")
-	return res
+	return strings.Join(strArr, "")
 }
