@@ -2,7 +2,7 @@ package problem
 
 // leetcode Add Two Numbers.
 // Runtime: 12 ms, faster than 70.07% of Go online submissions for Add Two Numbers.
-// Memory Usage: 6 MB, less than 5.01% of Go online submissions for Add Two Numbers.
+// Memory Usage: 5.6 MB, less than 5.01% of Go online submissions for Add Two Numbers
 
 // ListNode for singly-linked list.
 type ListNode struct {
@@ -23,7 +23,7 @@ func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 			temp += l2.Val
 			l2 = l2.Next
 		}
-		result = append([]int{temp % 10}, result[0:]...)
+		result = append(result, temp%10)
 		if temp/10 > 0 {
 			temp /= 10
 		} else {
@@ -35,11 +35,11 @@ func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	}
 	var resLinkedlist *ListNode
 
-	for idx, num := range result {
-		if idx > 0 {
-			resLinkedlist = &ListNode{num, resLinkedlist}
+	for idx := len(result) - 1; idx >= 0; idx-- {
+		if idx < len(result)-1 {
+			resLinkedlist = &ListNode{result[idx], resLinkedlist}
 		} else {
-			resLinkedlist = &ListNode{num, nil}
+			resLinkedlist = &ListNode{result[idx], nil}
 		}
 
 	}
