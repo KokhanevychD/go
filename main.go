@@ -13,8 +13,11 @@ func main() {
 	res1 := algo.Bubblesort(intArr)
 	res2 := algo.Insertion(intArr)
 	res3 := algo.ReverseVowels("Hello World")
+	res4 := problem.ByState(
+		"John Daggett, 341 King Road, Plymouth MA \nAlice Ford, 22 East Broadway, Richmond VA \nOrville Thomas, 11345 Oak Bridge Road, Tulsa OK \nTerry Kalkas, 402 Lans Road, Beaver Falls PA \nEric Adams, 20 Post Road, Sudbury MA \nHubert Sims, 328A Brook Road, Roanoke VA \nAmy Wilde, 334 Bayshore Pkwy, Mountain View CA \nSal Carpenter, 73 6th Street, Boston MA \n")
 	fmt.Println(res1)
 	fmt.Println(res2)
 	fmt.Println(res3)
 	problem.PlusMinus(int32arr)
+	fmt.Println(res4)
 }
